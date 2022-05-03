@@ -11,7 +11,7 @@ Golang學習筆記
   * [Go中較特別的資料型態差異](#Go中較特別的資料型態差異)
     * [Character](#Character)
   * [資料結構](#資料結構)
-    * [Slice vs Array](#Slice vs Array)
+    * [Slice vs Array](#Slice-vs-Array)
     * [Slice, Array兩者差異](#Slice Array兩者差異)
     * [Slice示意圖](#Slice示意圖)
     * [Slice操作](#Slice操作)
