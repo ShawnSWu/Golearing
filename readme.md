@@ -248,6 +248,7 @@ func modifySlice2(i []string) []string {
 在指標變數的前面加上星號＊，即表示<font size=3.5 color="#FF0000">反解指標</font>，即可透過指標指向的位置取得原始的資料
 
 ![](https://i.imgur.com/kl5nzZu.jpg)
+
 <font size=2 color="#A9A9A9">image by [彭彭](https://www.youtube.com/watch?v=k_E9FCehyz4)</font>
 
 
@@ -272,6 +273,7 @@ type Person struct {
 Golang中的函數與其他程式語言相比並無太多特別之處，只需要記住語法即可
 
 ![](https://i.imgur.com/TbkacpF.jpg)
+
 <font size=2 color="#A9A9A9">image by [GeeksforGeeks](https://www.geeksforgeeks.org/named-return-parameters-in-golang/)</font>
 
 ### Call by Value or reference
