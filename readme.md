@@ -5,7 +5,7 @@ Golang學習筆記
 
 <!--ts-->
 * [Golang學習筆記](#Golang學習筆記)
-  * [GOROOT、GOPATH、GO MODULE差異](#GOROOT、GOPATH、GO MODULE差異)
+  * [GOROOT、GOPATH、GO MODULE差異](##GOROOT、GOPATH、GO MODULE差異)
     * [GO 1.11Version以前](#GO 1.11Version以前)
     * [GO 1.11Version以後](#GO 1.11Version以後)
   * [Go中較特別的資料型態差異](#Go中較特別的資料型態差異)
