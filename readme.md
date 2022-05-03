@@ -5,9 +5,9 @@ Golang學習筆記
 
 <!--ts-->
 * [Golang學習筆記](#Golang學習筆記)
-  * [GOROOT,GOPATH,GOMODULE差異](##GOROOT,GOPATH,GOMODULE差異)
-    * [GO 1.11 Version以前](#GO-1.-11-Version以前)
-    * [GO 1.11 Version以後](#GO-1.-11-Version以後)
+  * [GOROOT GOPATH GOMODULE差異](#GOROOT-GOPATH-GOMODULE差異)
+    * [GO 1.11 Version以前](#GO-111-Version以前)
+    * [GO 1.11 Version以後](#GO-111-Version以後)
   * [Go中較特別的資料型態差異](#Go中較特別的資料型態差異)
     * [Character](#Character)
   * [資料結構](#資料結構)
@@ -24,12 +24,12 @@ Golang學習筆記
   * [Goroutine](#Goroutine)
 <!--te-->
 
-## GOROOT,GOPATH,GOMODULE差異
+## GOROOT GOPATH GOMODULE差異
 
 * GOROOT：存放Go語言內建的程式庫的所在位置
 * GOPATH：存放第三方套件的所在位置
 
-### **GO 1.11 Version以前**
+### GO 1.11 Version以前
 
 當執行Golang程式碼：
 先去GOROOT路徑下的src資料夾找，如果沒有就會去GOPATH路徑下的src找，如果還是沒有找到，就會錯誤。
@@ -43,7 +43,7 @@ Golang學習筆記
 
 
 
-### **GO 1.11 Version以後**
+### GO 1.11 Version以後
 
 出現了Go Modules這種方式來管理，將第三方程式庫儲存在本地的空間，並且給程式去引用，並且就是存在GOPATH裡面的pkg。
 > Go Modules解決方式很像是Java看到Maven, Gradle的做法
@@ -249,6 +249,7 @@ func modifySlice2(i []string) []string {
 在指標變數的前面加上星號＊，即表示<font size=3.5 color="#FF0000">反解指標</font>，即可透過指標指向的位置取得原始的資料
 
 ![](https://i.imgur.com/kl5nzZu.jpg)
+
 <font size=2 color="#A9A9A9">image by [彭彭](https://www.youtube.com/watch?v=k_E9FCehyz4)</font>
 
 
@@ -323,6 +324,7 @@ func main() {
 Golang中的函數與其他程式語言相比並無太多特別之處，只需要記住語法即可
 
 ![](https://i.imgur.com/TbkacpF.jpg)
+
 <font size=2 color="#A9A9A9">image by [GeeksforGeeks](https://www.geeksforgeeks.org/named-return-parameters-in-golang/)</font>
 
 ### Call by Value or reference
