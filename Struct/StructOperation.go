@@ -2,21 +2,28 @@ package main
 
 import "fmt"
 
-type Person struct {
-	Name string //
-	age  int
+type family struct {
+	relationship string
+	name         string
 }
 
-type Point struct {
-	X int
-	Y int
+type Person struct {
+	Name string
+	age  int
+	family
 }
+
 
 func main() {
-	p := Person{Name: "shawn", age: 20}
-	p2 := p
+	p := Person{
+		Name:   "shawn",
+		age:    20,
+		family: family{"Mom", "Elizabeth"},
+	}
+	fmt.Println(p)
 
-	p.age = 25
-	fmt.Println(p)  //{shawn 25}
-	fmt.Println(p2) //{shawn 20}
+
+	//匿名Struct
+	a := struct{name string}{name: "hello"}
+	fmt.Println(a.name)
 }

@@ -21,6 +21,7 @@ Golang學習筆記
   * [Function函數](#Function)
     * [Call by Value or reference(pointer)](#Call-by-Value-or-reference)
     * [特殊情況](#特殊情況)
+  * [Goroutine](#Goroutine)
 <!--te-->
 
 ## GOROOT,GOPATH,GOMODULE差異
@@ -257,14 +258,64 @@ func modifySlice2(i []string) []string {
 
 > 參數大小寫 決定此參數對外是public or protected, 非大寫開頭就只能在package內使用
 ```
-type Person struct {
-	Name string //對包外開放（public）
-	age int // （protected）
+type family struct {
+    relationship string
+    name         string
 }
+
+type Person struct {
+    Name string
+    age  int
+    family
+}
+
+func main() {
+    p := Person{
+        Name:   "shawn",
+        age:    20,
+        family: family{"Mom", "Elizabeth"},
+    }
+    fmt.Println(p)
+}
+
 ```
 
-待補...
+> 由於Golang是Call by value，所以若想改變Struct，請記得要搭配指標
 
+```
+func main() {
+    p := Company{Name: "IBM", employeeCount: 300}
+
+    updateStruct(p)
+    fmt.Println(p)  // {IBM 300}
+
+    updateStructWithPointer(&p)
+    fmt.Println(p)  // {Google 303}
+}
+
+func updateStruct(p Company) {
+    p.Name = "Google"
+    p.employeeCount += 3
+}
+
+func updateStructWithPointer(p *Company) {
+    p.Name = "Google"
+    p.employeeCount += 3
+}
+
+打印結果：
+{IBM 300}
+{Google 303}
+
+```
+支援匿名結構
+```
+func main() {
+    //匿名Struct
+    a := struct{name string}{name: "hello"}
+    fmt.Println(a.name)
+}
+```
 
 
 
@@ -325,3 +376,6 @@ func modifySlice(i []string) {
 原始的位址是：0x1400011e018
 
 ```
+
+## Goroutine
+待續..
