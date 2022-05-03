@@ -6,8 +6,8 @@ Golang學習筆記
 <!--ts-->
 * [Golang學習筆記](#Golang學習筆記)
   * [GOROOT,GOPATH,GOMODULE差異](##GOROOT,GOPATH,GOMODULE差異)
-    * [GO 1.11 Version以前](#GO-1-.11-Version以前)
-    * [GO 1.11 Version以後](#GO-1-.11-Version以後)
+    * [GO 1.11 Version以前](#GO-1.-11-Version以前)
+    * [GO 1.11 Version以後](#GO-1.-11-Version以後)
   * [Go中較特別的資料型態差異](#Go中較特別的資料型態差異)
     * [Character](#Character)
   * [資料結構](#資料結構)
