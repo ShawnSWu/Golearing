@@ -6,20 +6,20 @@ Golang學習筆記
 <!--ts-->
 * [Golang學習筆記](#Golang學習筆記)
   * [GOROOT,GOPATH,GOMODULE差異](##GOROOT,GOPATH,GOMODULE差異)
-    * [GO1.11Version以前](#GO1.11Version以前)
-    * [GO1.11Version以後](#GO1.11Version以後)
+    * [GO 1.11Version以前](#GO-1.11Version以前)
+    * [GO 1.11Version以後](#GO-1.11Version以後)
   * [Go中較特別的資料型態差異](#Go中較特別的資料型態差異)
     * [Character](#Character)
   * [資料結構](#資料結構)
     * [Slice vs Array](#Slice-vs-Array)
-    * [Slice, Array兩者差異](#Slice Array兩者差異)
+    * [Slice Array兩者差異](#Slice-Array兩者差異)
     * [Slice示意圖](#Slice示意圖)
     * [Slice操作](#Slice操作)
     * [Map](#Map)
   * [Pointer指標](#Pointer指標)
   * [Structs](#Structs)
   * [Function](#Function)
-    * [Call by Value or reference(pointer)](#Call by Value or reference(pointer))
+    * [Call by Value or reference(pointer)](#Call-by-Value-or-reference(pointer))
     * [特殊情況](#特殊情況)
 <!--te-->
 
@@ -28,7 +28,7 @@ Golang學習筆記
 * GOROOT：存放Go語言內建的程式庫的所在位置
 * GOPATH：存放第三方套件的所在位置
 
-### **GO1.11Version以前**
+### **GO 1.11Version以前**
 
 當執行Golang程式碼：
 先去GOROOT路徑下的src資料夾找，如果沒有就會去GOPATH路徑下的src找，如果還是沒有找到，就會錯誤。
@@ -42,7 +42,7 @@ Golang學習筆記
 
 
 
-### **GO1.11Version以後**
+### **GO 1.11Version以後**
 
 出現了Go Modules這種方式來管理，將第三方程式庫儲存在本地的空間，並且給程式去引用，並且就是存在GOPATH裡面的pkg。
 > Go Modules解決方式很像是Java看到Maven, Gradle的做法
@@ -74,7 +74,7 @@ fmt.Printf("%d", ch) // 打印出 97
 
 ---
 ## 資料結構
-### Slice vs Array
+### Slice Array兩者差異
 
 Slice 可以當成『在操作底層陣列』的『抽象』，透過操作這個『抽象』可以直接對底層真正對應的陣列去做操作，
 
@@ -218,7 +218,7 @@ func modifySlice2(i []string) []string {
 ```
 
 
-## Pointer 指標
+## Pointer指標
 
 #### 指標概念：
 
